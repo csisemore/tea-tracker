@@ -1,0 +1,33 @@
+***** Overview *****
+
+This application will allow the user to inventory their teas, as well as keep notes on likes & dislikes. It will store the brand, the name, the flavor type, the format of the tea, as well as thoughts on the tea. It will also allow the user to note which friends like certain teas.
+
+***** Features *****
+
+ - database for the teas, including but not limited to:
+ 	- brand name (Adagio, David's Tea, Lipton, etc)
+ 	- tea name (Sleepytime, Happy Kombucha, British Blend, etc)
+ 	- tea format (loose, small bags, pitcher bags)
+ 	- quantity - (if bagged tea, number of bags - if loose, grams)
+ 	- caffeine level
+ 	- tea type (black, green, herbal, etc)
+ 	- water temp to use
+ 	- brew time
+ 	- tea friends
+ - list functionality.
+ - search functionality.
+ - ability to note who likes what teas.
+
+
+***** Technologies *****
+
+ - java 8
+ - thymeleaf
+ - spring boot
+ - bootstrap
+ - a TBD framework?
+
+***** What I'll Have to Learn *****
+
+- a framework ()
+- my css skills are very weak, so I will need to revisit those.
