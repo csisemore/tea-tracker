@@ -31,3 +31,14 @@ This application will allow the user to inventory their teas, as well as keep no
 
 - a framework (probably react).
 - my css skills are very weak, so I will need to revisit those.
+
+***** Links *****
+
+- Pivitol Tracker 
+	https://www.pivotaltracker.com/n/projects/2313498
+
+- Liftoff Generic Repository
+	https://github.com/csisemore/liftoff-assignments
+
+- Tea-Tracker Repository
+	https://github.com/csisemore/tea-tracker
