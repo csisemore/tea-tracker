@@ -1,25 +1,23 @@
 package com.example.teatracker.controllers;
 
-
-import com.example.teatracker.models.data.BrandDao;
+import com.example.teatracker.models.data.TeaDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("brand")
-public class BrandController {
+@RequestMapping("tea")
+public class TeaController {
     @Autowired
-    private BrandDao brandDao;
+    private TeaDao teaDao;
 
     @RequestMapping(value = "")
     public  String index(Model model){
-        model.addAttribute("title", "Brands");
-        //model.addAttribute("brands", brandDao.findAll());
-        model.addAttribute("brand_name", brandDao.findAll());
+        model.addAttribute("title", "Teas");
+        model.addAttribute("brands", teaDao.findAll());
 
-
-        return "brand/index";
+        return "tea/index";
     }
 }
+
