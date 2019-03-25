@@ -1,11 +1,13 @@
 package com.example.teatracker.models;
 
-import org.springframework.data.annotation.Id;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
+@Entity
 public class Tea {
     @Id
     @GeneratedValue
@@ -18,12 +20,18 @@ public class Tea {
     private String tea_name;
 
 
-    @NotNull
+
+    //@NotNull
     @Size()
     private Boolean like_dislike;
 
     @ManyToOne
     private Brand brand;
+
+    public Tea(String tea_name, Boolean like_dislike) {
+        this.tea_name = tea_name;
+        this.like_dislike = like_dislike;
+    }
 
     public Tea() {
     }
@@ -45,5 +53,13 @@ public class Tea {
 
     public void setLike_dislike(Boolean like_dislike) {
         this.like_dislike = like_dislike;
+    }
+
+    public Brand getBrand() {
+        return brand;
+    }
+
+    public void setBrand(Brand brand) {
+        this.brand = brand;
     }
 }
