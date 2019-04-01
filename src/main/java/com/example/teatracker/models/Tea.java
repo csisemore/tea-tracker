@@ -11,7 +11,7 @@ import javax.validation.constraints.Size;
 public class Tea {
     @Id
     @GeneratedValue
-    private int id;
+    private int tea_id;
 
 
     @NotNull
@@ -20,25 +20,28 @@ public class Tea {
     private String tea_name;
 
 
-
+// out until I figure this out.
     //@NotNull
-    @Size()
-    private Boolean like_dislike;
+//    @Size()
+//    private Boolean like_dislike;
 
     @ManyToOne
     private Brand brand;
 
-    public Tea(String tea_name, Boolean like_dislike) {
+
+//    public Tea(String tea_name, Boolean like_dislike) {
+    public Tea(String tea_name) {
         this.tea_name = tea_name;
-        this.like_dislike = like_dislike;
+        //       this.like_dislike = like_dislike;
     }
 
     public Tea() {
     }
 
-    public int getId() {
-        return id;
+    public int getTea_id() {
+        return tea_id;
     }
+
     public String getTea_name() {
         return tea_name;
     }
@@ -47,13 +50,13 @@ public class Tea {
         this.tea_name = tea_name;
     }
 
-    public Boolean getLike_dislike() {
-        return like_dislike;
-    }
-
-    public void setLike_dislike(Boolean like_dislike) {
-        this.like_dislike = like_dislike;
-    }
+//    public Boolean getLike_dislike() {
+//        return like_dislike;
+//    }
+//
+//    public void setLike_dislike(Boolean like_dislike) {
+//        this.like_dislike = like_dislike;
+//    }
 
     public Brand getBrand() {
         return brand;
