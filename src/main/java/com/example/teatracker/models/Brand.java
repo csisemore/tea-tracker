@@ -22,7 +22,8 @@ public class Brand {
 
     @OneToMany
     @JoinColumn(name = "id")
-    private List<Tea> tea = new ArrayList<>();
+    //private List<Tea> tea = new ArrayList<>();
+    private List<Tea> teas = new ArrayList<>();
 
     public Brand(){
     }
@@ -43,7 +44,9 @@ public class Brand {
         this.brand_name = brand_name;
     }
 
+//    public  List<Tea> getTeas() {
+//        return tea;
     public  List<Tea> getTeas() {
-        return tea;
+        return teas;
     }
 }

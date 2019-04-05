@@ -20,7 +20,7 @@ public class BrandController {
     @RequestMapping(value = "")
     public  String index(Model model){
         model.addAttribute("title", "Tea Brands");
-        model.addAttribute("brand", brandDao.findAll());
+        model.addAttribute("brands", brandDao.findAll());
 
         return "brand/index";
         //return "/brand/index";

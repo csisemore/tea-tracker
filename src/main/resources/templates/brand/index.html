@@ -11,15 +11,21 @@
 <hr/>
 
 
-<p th:unless="${brand} and ${brand.size()}">no tea brands available :(</p>
+<!-- <p th:unless="${brand} and ${brand.size()}">no tea brands available :(</p>
+<p th:unless="${brands} and ${brand.size()}">no tea brands available :(</p> -->
+<p th:unless="${brands} and ${brands.size()}">no tea brands available :(</p>
+
 
 
 <div class="list">
     <ul>
-        <li th:each="item : ${brand}"><span th:text="${brand_name}"></span></li>
-    </ul>
-</div>
+        <li th:each="item : ${brands}"><span th:text="${name}"></span></li>
+        <!--         <li th:each="item : ${brand}"><span th:text="${brand_name}"></span></li>
+                     <li th:each="item : ${brand}"><span th:text="${brand.name}"></span></li>
+            <li th:each="item : ${brands}"><span th:text="${brand_name.name}"></span></li>  -->
+          </ul>
+      </div>
 
-<a href="/brand/add">Add Tea Brand</a>
-</body>
-</html>
+      <a href="/brand/add">Add Tea Brand</a>
+      </body>
+      </html>
