@@ -1,10 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+
+<body class="container">
+
+<h1 th:text="${title}">Default Title</h1>
+
+<nav th:replace="fragments :: navigation"></nav>
+
+<hr />
+<!--
+<form method="post" style="max-width:600px;" th:object="${category}">
+-->
+<form method="post" th:object="${tea_type}">
+    <div class="form-group">
+        <label th:for="name">Tea Type</label>
+        <input class="form-control" th:field="*{tea_type}" />
+        <span th:errors="*{tea_type}" class="error"></span>
+    </div>
+
+    <input type="submit" value="Add Tea Type" />
+</form>
+
 
 </body>
 </html>

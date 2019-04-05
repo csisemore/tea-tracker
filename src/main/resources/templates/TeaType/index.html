@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+
+<body class="container">
+
+<h1 th:text="${title}">Default Title</h1>
+
+<nav th:replace="fragments :: navigation"></nav>
+
+<hr/>
+
+
+<p th:unless="${tea} and ${tea.size()}">no teas available :(</p>
+
+
+<div class="list">
+    <ul>
+       <li th:each="item : ${tea_type}"><span th:text="${tea_type.name}"></span></li>
+        <!--         <li th:each="item : ${tea_type}"><span th:text="${tea_type.tea_type}"></span></li> -->
+            </ul>
+        </div>
+
+        <a href="tea/add">Add New Tea Type</a>
+        </body>
+        </html>
