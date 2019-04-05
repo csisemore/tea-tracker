@@ -22,7 +22,7 @@ public class TeaController {
 
     @Autowired
     private BrandDao brandDao;
-//    private Integer brandId;
+
 
     @RequestMapping(value = "")
     public  String index(Model model){
@@ -48,9 +48,10 @@ public class TeaController {
         }
 
 
-//        Integer brand_id;
-//        Brand brand = brandDao.findOne(id);
-        teaDao.save(tea);
+//        Brand brand = BrandDao.findOne(brand_id);
+//        newTea.setBrand(brand);
+//        teaDao.save(newTea);
+
         return "redirect:";
 
     }

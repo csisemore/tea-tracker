@@ -20,12 +20,14 @@ public class BrandController {
     @RequestMapping(value = "")
     public  String index(Model model){
         model.addAttribute("title", "Tea Brands");
-        model.addAttribute("brand", brandDao.findAll());
+        model.addAttribute("brands", brandDao.findAll());
 
         return "brand/index";
+        //return "/brand/index";
     }
 
     @RequestMapping(value = "add", method = RequestMethod.GET)
+    //@RequestMapping(value = "/add", method = RequestMethod.GET)
           public String displayAddBrandForm(Model model){
               model.addAttribute("title", "Add Brand");
               model.addAttribute(new Brand());
@@ -34,6 +36,7 @@ public class BrandController {
          }
 
     @RequestMapping(value = "add", method = RequestMethod.POST)
+    //@RequestMapping(value = "/add", method = RequestMethod.POST)
     public String processAddBrandForm(@ModelAttribute @Valid Brand brand, Errors errors, Model model){
         if (errors.hasErrors()){
                   model.addAttribute("title", "Add Brand");

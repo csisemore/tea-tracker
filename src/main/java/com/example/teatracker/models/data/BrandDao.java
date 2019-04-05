@@ -8,6 +8,5 @@ import javax.transaction.Transactional;
 
 @Repository
 @Transactional
-public
-interface BrandDao extends CrudRepository<Brand, Integer> {
+public interface BrandDao extends CrudRepository<Brand, Integer> {
 }
