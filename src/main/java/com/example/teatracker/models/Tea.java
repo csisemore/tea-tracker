@@ -9,12 +9,13 @@ import javax.validation.constraints.Size;
 
 @Entity
 public class Tea {
+
     @Id
     @GeneratedValue
-    private int tea_id;
+    private int id;
 
 
-    @NotNull
+    //@NotNull
     //@Size(min=2, max=25)
     @Size(min=2)
     private String tea_name;
@@ -38,9 +39,16 @@ public class Tea {
     public Tea() {
     }
 
-    public int getTea_id() {
-        return tea_id;
+    public int getId() {
+        return id;
     }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+    //public int getTea_id() {
+        //return id;
+    //}
 
     public String getTea_name() {
         return tea_name;

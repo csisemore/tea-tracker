@@ -8,9 +8,12 @@ import java.util.List;
 @Entity
 public class Brand {
 
+
+
     @Id
     @GeneratedValue
-    private int brand_id;
+    private int id;
+
 
     //@NotNull
     //@Size(min=2, max=25)
@@ -18,17 +21,18 @@ public class Brand {
     private String brand_name;
 
     @OneToMany
-    @JoinColumn(name = "brand_id")
+    @JoinColumn(name = "id")
     private List<Tea> tea = new ArrayList<>();
 
     public Brand(){
     }
-    public int getBrand_id() {
-        return brand_id;
+
+    public int getId() {
+        return id;
     }
 
-    public void setBrand_id(int brand_id) {
-        this.brand_id = brand_id;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getBrand_name() {

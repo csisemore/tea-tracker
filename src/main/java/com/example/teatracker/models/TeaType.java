@@ -12,7 +12,7 @@ public class TeaType {
 
     @Id
     @GeneratedValue
-    private int tea_type_id;
+    private int id;
 
 
 
@@ -21,12 +21,12 @@ public class TeaType {
 
 
 
-    public int getTea_type_id() {
-        return tea_type_id;
+    public int getId() {
+        return id;
     }
 
-    public void setTea_type_id(int tea_type_id) {
-        this.tea_type_id = tea_type_id;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getTea_type() {
