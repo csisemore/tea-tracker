@@ -19,7 +19,7 @@ import javax.validation.Valid;
 public class TeaTypeController {
 
     @Autowired
-    private TeaTypeDao teaTypeDao;
+    private TeaTypeDao TeaTypeDao;
 
     @Autowired
     private TeaDao teaDao;
@@ -29,7 +29,7 @@ public class TeaTypeController {
     @RequestMapping(value = "")
     public String index(Model model, Object TeaType, Object add){
         model.addAttribute("title","Tea Types");
-        model.addAttribute("tea types", teaTypeDao.findAll());
+        model.addAttribute("tea types", TeaTypeDao.findAll());
 
 //        return "teatype/add";
         //return "/teatype/index";
@@ -51,7 +51,7 @@ public class TeaTypeController {
             model.addAttribute("title", "Add Brand");
             return "/teatype/add";
         }
-        teaTypeDao.save(teaType);
+        TeaTypeDao.save(teaType);
         return "redirect:";
     }
 

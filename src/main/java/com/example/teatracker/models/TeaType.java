@@ -1,10 +1,10 @@
 package com.example.teatracker.models;
 
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class TeaType {
@@ -14,10 +14,20 @@ public class TeaType {
     @GeneratedValue
     private int id;
 
+
     @NotNull
-    private String tea_type;
+    private String teaType;
 
+    @OneToMany
+    @JoinColumn(name = "id")
+    private List<Tea> teas = new ArrayList<>();
 
+    public TeaType(){
+    }
+
+    public  List<Tea> getTeas() {
+        return teas;
+    }
 
     public int getId() {
         return id;
@@ -27,12 +37,12 @@ public class TeaType {
         this.id = id;
     }
 
-    public String getTea_type() {
-        return tea_type;
+    public String getTeaType() {
+        return teaType;
     }
 
-    public void setTea_type(String tea_type) {
-        this.tea_type = tea_type;
+    public void setTeaType(String teaType) {
+        this.teaType = teaType;
 
     }
 
