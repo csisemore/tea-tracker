@@ -19,10 +19,11 @@
 
 <div class="list">
     <ul>
-        <li th:each="item : ${brands}"><span th:text="${name}"></span></li>
-        <!--         <li th:each="item : ${brand}"><span th:text="${brand_name}"></span></li>
-                     <li th:each="item : ${brand}"><span th:text="${brand.name}"></span></li>
-            <li th:each="item : ${brands}"><span th:text="${brand_name.name}"></span></li>  -->
+        <!--   <li th:each="item : ${brands}"><span th:text="${name}"></span></li>
+                    <li th:each="item : ${brand}"><span th:text="${brand_name}"></span></li>
+                        <li th:each="item : ${brand}"><span th:text="${brand.name}"></span></li>
+               <li th:each="item : ${brands}"><span th:text="${brand_name.name}"></span></li>  -->
+        <li th:each="item : ${brands}"><span th:text="${item.brand_name}"></span></li>
           </ul>
       </div>
 

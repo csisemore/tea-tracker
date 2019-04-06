@@ -14,8 +14,6 @@ public class TeaType {
     @GeneratedValue
     private int id;
 
-
-
     @NotNull
     private String tea_type;
 
