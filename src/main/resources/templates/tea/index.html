@@ -10,16 +10,53 @@
 
 <hr/>
 
+<table class="table">
 
+
+<tr>
+    <th>Name</th>
+    <th>Brand</th>
+</tr>
+<tr th:each="tea : ${teas}">
+    <td th:text="${tea.name}"></td>
+    <td th:text="${tea.brand.name}"></td>
+</tr>
+</table>
+
+<!--
 <p th:unless="${tea} and ${tea.size()}">no teas available :(</p>
 
+<p th:unless="${teas} and ${teas.size()}">no teas available :(</p>
 
 <div class="list">
     <ul>
-        <li th:each="item : ${tea}"><span th:text="${tea.name}"></span></li>
-    </ul>
-</div>
+             <li th:each="item : ${tea}"><span th:text="${tea.name}"></span></li>
 
-<a href="tea/add">Add New Tea </a>
-</body>
-</html>
+         <li th:each="item : ${brands}"><span th:text="${item.brand_name}"></span></li>
+
+        <li th:each="item : ${teas}"><span th:text="${item.tea_name}"></span></li>
+           </ul>
+       </div>
+
+       <table class="table">
+
+    <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Category</th>
+    </tr>
+
+    <tr th:each="cheese : ${cheeses}">
+        <td th:text="${cheese.name}"></td>
+        <td th:text="${cheese.description}"></td>
+        <td th:text="${cheese.category.name}"></td>
+    </tr>
+
+</table>
+-->
+
+
+
+       <a href="tea/add">Add New Tea </a>
+       </body>
+       </html>

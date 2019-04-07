@@ -37,19 +37,19 @@ public class TeaTypeController {
     }
     @RequestMapping(value = "add", method = RequestMethod.GET)
     //@RequestMapping(value = "/add", method = RequestMethod.GET)
-    public String displayAddBrandForm(Model model){
+    public String displayAddTeaTypeForm(Model model){
         model.addAttribute("title", "Add Tea Type");
         model.addAttribute(new teaType());
 
-        return "/teatype/add";
+        return "teatype/add";
     }
 
     @RequestMapping(value = "add", method = RequestMethod.POST)
 
-    public String processAddBrandForm(@ModelAttribute @Valid TeaType teaType, Errors errors, Model model){
+    public String processAddTeaTypeForm(@ModelAttribute @Valid TeaType teaType, Errors errors, Model model){
         if (errors.hasErrors()){
             model.addAttribute("title", "Add Brand");
-            return "/teatype/add";
+            return "teatype/add";
         }
         teaTypeDao.save(teaType);
         return "redirect:";

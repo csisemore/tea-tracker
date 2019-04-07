@@ -20,11 +20,11 @@
         <span th:errors="*{tea_name}" class="error"></span>
     </div>
     <div class="form-group">
-        <label th:for="Brand">Brand</label>
-        <select name="brand_id">
-            <option th:each="brand :${brand}"
+        <label th:for="type">Brand</label>
+        <select name="brandId">
+            <option th:each="brand :${brands}"
                     th:text="${brand.name}"
-                    th:value="${brand.brand_id}">
+                    th:value="${brand.id}">
 
             </option>
         </select>
