@@ -16,28 +16,37 @@
 <form method="post" th:object="${tea}">
     <div class="form-group">
         <label th:for="name">Tea Name</label>
-        <input class="form-control" th:field="*{tea_name}" />
-        <span th:errors="*{tea_name}" class="error"></span>
+        <input class="form-control" th:field="*{name}" />
+        <span th:errors="*{name}" class="error"></span>
     </div>
     <div class="form-group">
         <label th:for="type">Brand</label>
-        <select name="brandId">
-            <option th:each="brand :${brands}"
-                    th:text="${brand.name}"
-                    th:value="${brand.id}">
-
-            </option>
-        </select>
-    </div>
-    <!--
-        <div class="form-group">
-            <label th:for="">Check the box if you like this tea</label>
-            <input class="checkbox" th:field="*{like_dislike}" />
-            <span th:errors="*{like_dislike}" class="error"></span>
-        </div>
-     -->
+        <!--         <select name="brandId">-->
+                         <select name="brand_id">
+                             <option th:each="brand :${brands}"
+                                  th:text="${brand.brand_name}"
+                                  th:value="${brand.id}">
+                         </option>
+                     </select>
+                 </div>
+                 <!--
+                     <div class="form-group">
+                         <label th:for="">Check the box if you like this tea</label>
+                         <input class="checkbox" th:field="*{like_dislike}" />
+                         <span th:errors="*{like_dislike}" class="error"></span>
+                     </div>
+                  -->
 
         <input type="submit" value="Add New Tea" />
     </form>
     </body>
     </html>
+
+<!--
+            <select name="brand_id">
+                   <option th:each="brand :${brands}"
+                        th:text="${brand.brand_name}"
+                        th:value="${brand.id}">
+               </option>
+           </select>
+  -->

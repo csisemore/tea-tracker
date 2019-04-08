@@ -8,10 +8,9 @@
 
 <nav th:replace="fragments :: navigation"></nav>
 
-<hr/>
+<!--<hr/> -->
 
 <table class="table">
-
 
 <tr>
     <th>Name</th>
@@ -23,6 +22,9 @@
 </tr>
 </table>
 
+<a href="tea/add">Add New Tea </a>
+</body>
+</html>
 <!--
 <p th:unless="${tea} and ${tea.size()}">no teas available :(</p>
 
@@ -53,10 +55,11 @@
     </tr>
 
 </table>
+
+
+<tr th:each="tea : ${teas}">
+    <td th:text="${tea.name}"></td>
+    <td th:text="${tea.brand.name}"></td>
+</tr>
 -->
 
-
-
-       <a href="tea/add">Add New Tea </a>
-       </body>
-       </html>

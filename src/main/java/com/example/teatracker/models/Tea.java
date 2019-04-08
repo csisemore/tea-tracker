@@ -3,7 +3,6 @@ package com.example.teatracker.models;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
-import java.util.List;
 
 @Entity
 public class Tea {
@@ -33,6 +32,7 @@ public class Tea {
 
 
     public Tea(String name) {
+
         this.name = name;
     }
 
@@ -40,27 +40,35 @@ public class Tea {
     }
 
     public int getId() {
+
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
-
-//    public String getTea_name() {
-//        return tea_name;
-//    }
-//
-//    public void setTea_name(String tea_name) {
-//        this.tea_name = tea_name;
-//    }
     public String getName() {
+
         return name;
     }
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public void setId(int id) {
+
+        this.id = id;
+    }
+
+
+
+    public Brand getBrand() {
+
+        return brand;
+    }
+
+
+    public void setBrand(Brand brand) {
+
+        this.brand = brand;
     }
 
 
@@ -71,14 +79,6 @@ public class Tea {
 //    public void setLike_dislike(Boolean like_dislike) {
 //        this.like_dislike = like_dislike;
 //    }
-
-    public Brand getBrand() {
-        return brand;
-    }
-
-    public void setBrand(Brand brand) {
-        this.brand = brand;
-    }
 
 //    public List<TeaType> getTeaType(){
 //        return teaTypes;

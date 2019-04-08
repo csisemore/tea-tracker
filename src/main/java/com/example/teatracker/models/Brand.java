@@ -12,7 +12,8 @@ public class Brand {
 
     @Id
     @GeneratedValue
-    private int id;
+    //private int id;
+    public int id;
 
 
     //@NotNull
